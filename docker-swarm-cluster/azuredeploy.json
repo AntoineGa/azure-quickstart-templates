@@ -10,19 +10,19 @@
     },
     "nodeCount": {
       "type": "int",
-      "defaultValue": 3,
+      "defaultValue": 1,
       "metadata": {
         "description": "Number of Swarm worker nodes in the cluster."
       }
     }
   },
   "variables": {
-    "masterCount": 3,
+    "masterCount": 1,
     "adminUsername": "azureuser",
     "vmNameMaster": "swarm-master-",
     "vmNameNode": "swarm-node-",
-    "vmSizeMaster": "Standard_A0",
-    "vmSizeNode": "Standard_A2",
+    "vmSizeMaster": "Basic_A0",
+    "vmSizeNode": "Basic_A1",
     "availabilitySetMasters": "swarm-masters-set",
     "availabilitySetNodes": "swarm-nodes-set",
     "osImagePublisher": "CoreOS",
