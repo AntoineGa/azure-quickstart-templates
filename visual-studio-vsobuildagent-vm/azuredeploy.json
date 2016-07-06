@@ -252,7 +252,7 @@
             },
             "protectedSettings":
             {
-              "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).primaryEndpoints.blob, variables('vmStorageAccountContainerName'), '/', variables('vmOSDiskName'), '.vhd')]"
+              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -Command .\\InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser ', parameters('vsoUser'), ' -VSOPass ', parameters('vsoPass'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'))]"
             }
           }
         }
