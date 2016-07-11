@@ -15,6 +15,7 @@
     },
     "deployLocation": {
       "type": "string",
+      "defaultValue": "North Europe",
       "allowedValues": [
         "Central US",
         "East US 2",
@@ -252,7 +253,7 @@
             },
             "protectedSettings":
             {
-              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -Command .\\InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser ', parameters('vsoUser'), ' -VSOPass ', parameters('vsoPass'), ' -AgentName ', parameters('vmName'), ' -PoolName ', parameters('poolName'))]"
+              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -Command .\\InstallVSOAgent.ps1 -VSOAccount ', parameters('vsoAccount'), ' -VSOUser "', parameters('vsoUser'), '" -VSOPass ', parameters('vsoPass'), "' -AgentName ', parameters('vmName'), '" -PoolName "', parameters('poolName'), '"')]"
             }
           }
         }
